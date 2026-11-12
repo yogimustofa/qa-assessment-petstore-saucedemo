@@ -1,0 +1,6 @@
+node_modules/
+playwright-report/
+test-results/
+test-results.json
+.DS_Store
+Thumbs.db

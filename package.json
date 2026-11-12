@@ -1,0 +1,28 @@
+{
+  "name": "qa-assessment-petstore-saucedemo",
+  "version": "1.0.0",
+  "description": "Comprehensive QA Assessment - Swagger Petstore API Automation & SauceDemo UI Automation with Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test tests/api",
+    "test:ui": "playwright test tests/ui",
+    "test:headed": "playwright test tests/ui --headed",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "playwright",
+    "saucedemo",
+    "petstore",
+    "api-testing",
+    "ui-testing",
+    "pom"
+  ],
+  "author": "Muhammad Yogi Mustofa",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
