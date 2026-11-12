@@ -21,8 +21,8 @@ module.exports = defineConfig({
   ],
   use: {
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure'
+    screenshot: 'on',
+    video: 'on'
   },
   projects: [
     {

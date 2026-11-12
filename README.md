@@ -34,9 +34,28 @@ This repository contains the complete solution for the **Junior to Medior QA Eng
 
 ```text
 qa-assessment-petstore-saucedemo/
-├── QA_Assessment_TestCases_and_BugReport.xlsx   <-- Comprehensive Excel (Test Cases, Execution Report, Bugs)
-├── package.json                                 <-- Project dependencies & scripts
-├── playwright.config.js                         <-- Playwright configuration (projects, timeouts, reporters)
+├── TestCases-ManualAPI_and_BugReport.xlsx       <-- Master Excel (Manual Test Cases, Status, Actual Result, Bugs with Screenshots)
+├── postman_collection.json                      <-- Ready-to-import Postman Collection with assertions
+├── package.json                                 <-- Project dependencies & test scripts
+├── playwright.config.js                         <-- Playwright configuration (video & screenshot enabled)
+├── docs/                                        <-- Test Evidences & Media Artifacts
+│   ├── recordings/                              <-- Full Video Recordings (.webm) of UI Automation
+│   │   ├── E2E_Checkout_Sauce_Labs_Onesie.webm  <-- Full video of Sauce Labs Onesie E2E checkout
+│   │   └── Login_Standard_User.webm             <-- Full video of successful login flow
+│   └── screenshots/
+│       ├── manual_api/                          <-- Evidence screenshots for manual API & Bug reports
+│       │   ├── TC-API-001_POST_pet_success.png
+│       │   ├── BUG-001_POST_pet_empty_body.png
+│       │   ├── BUG-002_POST_pet_500_error.png
+│       │   ├── TC-006_GET_findByStatus_available.png
+│       │   ├── BUG-003_GET_findByStatus_doc_mismatch.png
+│       │   ├── TC-012_DELETE_pet_success.png
+│       │   └── BUG-004_DELETE_pet_java_exception.png
+│       └── ui_automation/                       <-- Visual evidence from automated browser test execution
+│           ├── Login_Success_Inventory.png
+│           ├── Login_Locked_Out_User.png
+│           ├── E2E_Checkout_Complete.png
+│           └── Checkout_Empty_Validation.png
 ├── pages/                                       <-- Page Object Model (POM) classes
 │   ├── LoginPage.js                             <-- SauceDemo Login page locators & actions
 │   ├── InventoryPage.js                         <-- Products page locators & cart actions
@@ -59,7 +78,7 @@ qa-assessment-petstore-saucedemo/
 ## 📝 Task 1: Manual API Testing & Bug Reports
 
 All manual test cases, actual execution outcomes, and defect documentation are compiled into:
-👉 **[`QA_Assessment_TestCases_and_BugReport.xlsx`](./QA_Assessment_TestCases_and_BugReport.xlsx)**
+👉 **[`TestCases-ManualAPI_and_BugReport.xlsx`](./TestCases-ManualAPI_and_BugReport.xlsx)**
 
 ### The workbook contains 3 detailed sheets:
 1. **`Manual Test Cases`**: 15 comprehensive test cases across `POST /pet`, `GET /pet/findByStatus`, and `DELETE /pet/{petId}` with Positive, Negative, and Boundary validations.
@@ -162,7 +181,7 @@ This opens a local browser report displaying test timelines, step-by-step traces
 
 ## 🐛 Bug Documentation Summary
 
-During manual and automated testing on `https://petstore.swagger.io/v2`, the following discrepancies were identified and logged in [`QA_Assessment_TestCases_and_BugReport.xlsx`](./QA_Assessment_TestCases_and_BugReport.xlsx):
+During manual and automated testing on `https://petstore.swagger.io/v2`, the following discrepancies were identified and logged in [`TestCases-ManualAPI_and_BugReport.xlsx`](./TestCases-ManualAPI_and_BugReport.xlsx):
 
 | Bug ID | Endpoint | Summary | Severity | Expected vs Actual |
 |---|---|---|---|---|
