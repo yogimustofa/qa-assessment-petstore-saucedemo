@@ -43,10 +43,14 @@ qa-assessment-petstore-saucedemo/
 │   ├── CartPage.js                              <-- Shopping cart page & checkout trigger
 │   └── CheckoutPage.js                          <-- Multi-step checkout form & verification
 ├── tests/
-│   ├── api/
-│   │   └── petstore.spec.js                     <-- Task 2: 3 Endpoints API Automated Suite
-│   └── ui/
-│       └── saucedemo.spec.js                    <-- Task 3: Login & E2E Checkout Flow
+│   ├── api/                                     <-- Task 2: Modular API Test Suites per Endpoint
+│   │   ├── post-pet.spec.js                     <-- POST /pet validations
+│   │   ├── get-pet-by-status.spec.js            <-- GET /pet/findByStatus validations
+│   │   ├── delete-pet.spec.js                   <-- DELETE /pet/{petId} validations
+│   │   └── pet-lifecycle.spec.js                <-- Full E2E Lifecycle Chaining (POST -> GET -> DELETE -> 404)
+│   └── ui/                                      <-- Task 3: Modular UI Test Suites per Feature
+│       ├── login.spec.js                        <-- Login scenarios (Positive & Negative validations)
+│       └── checkout-e2e.spec.js                 <-- E2E Checkout Flow ('Sauce Labs Onesie' + boundary checks)
 └── README.md                                    <-- Guidance & documentation
 ```
 

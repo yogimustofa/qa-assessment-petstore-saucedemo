@@ -2,5 +2,7 @@ node_modules/
 playwright-report/
 test-results/
 test-results.json
+~$*.xlsx
+~$*.docx
 .DS_Store
 Thumbs.db
